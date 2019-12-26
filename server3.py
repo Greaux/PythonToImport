@@ -2,7 +2,7 @@
 import socket
 import subprocess
 
-socket=socket.socket(sck.AF_INET, sck.SOCK_STREAM)
+socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind(('127.0.0.1', 10001))
 sock.listen(1)
 while True:
