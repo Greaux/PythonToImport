@@ -20,7 +20,7 @@ def brute(t,y):
                     found = True
                     break
                 except:
-                        pass
+                    pass
                 if found:
                     print
                 
