@@ -23,9 +23,7 @@ def brute(t,y):
                     pass
             if found:
                 print
-                thread1.join()
-                thread2.join()
-                thread3.join()
+                
 thread1 = Thread(target=brute, args=(1,2))
 thread2 = Thread(target=brute, args=(3,4))
 thread3 = Thread(target=brute, args=(5,6))
@@ -33,3 +31,6 @@ thread3 = Thread(target=brute, args=(5,6))
 thread1.start()
 thread2.start()
 thread3.start()
+thread1.join()
+thread2.join()
+thread3.join()
