@@ -21,8 +21,8 @@ def brute(t,y):
                     break
                 except:
                     pass
-                if found:
-                    print
+            if found:
+                print
                 
 thread1 = Thread(target=brute, args=(1,2))
 thread2 = Thread(target=brute, args=(3,4))
