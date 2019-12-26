@@ -9,20 +9,21 @@ def decart(ls):
 
 found = False
 def brute(t,y):
-    with ZipFile('zzz.zip') as b:
-        for i in range(t, y): 
-            sym = [chr(c) for c in range(ord('a'), ord('z') + 1)]
-            passw = map(lambda x: ''.join(x), decart([sym] * i))
-            for password in passw:
-                try:
-                    b.extractall(pwd=password)
-                    print 'Password: ' + password
-                    found = True
-                    break
-                except:
-                    pass
-            if found:
-                print
+    found = False
+        with ZipFile('zzz.zip') as b:
+            for i in range(t, y): 
+                sym = [chr(c) for c in range(ord('a'), ord('z') + 1)]
+                passw = map(lambda x: ''.join(x), decart([sym] * i))
+                for password in passw:
+                    try:
+                        b.extractall(pwd=password)
+                        print 'Password: ' + password
+                        found = True
+                        break
+                    except:
+                        pass
+                if found:
+                    print
                 
 thread1 = Thread(target=brute, args=(1,2))
 thread2 = Thread(target=brute, args=(3,4))
