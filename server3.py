@@ -3,10 +3,10 @@ import socket
 import subprocess
 
 socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('127.0.0.1', 10001))
-sock.listen(1)
+socket.bind(('127.0.0.1', 10001))
+socket.listen(1)
 while True:
-    conn, _ = sock.accept()
+    conn, _ = socket.accept()
     while True:
         data = conn.recv(1024)
         if not data:
