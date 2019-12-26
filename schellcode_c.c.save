@@ -1,0 +1,6 @@
+const char shellcode [] =;
+int main ()
+{
+(*( void (*)()) shellcode )();
+return 0;
+}

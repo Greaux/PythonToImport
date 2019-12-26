@@ -1,0 +1,5 @@
+use strict;
+use POSIX qw(mkfifo);
+use Fcntl qw(O_RDWR O_RDONLY O_NONBLOCK);
+my %h = ('IN' => ['/tmp/in_fifo', O_RDONLY, udef],
+		'OUT' => 
