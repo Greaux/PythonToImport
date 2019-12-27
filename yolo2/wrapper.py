@@ -31,7 +31,7 @@ if __name__ == "__main__" :
         # startyem
         a = subprocess.Popen(["./a.out", env["SHELLCODE"]],stdout=subprocess.PIPE)
     
-    print a.communicate()[0]
+    stdoutput = a.communicate()[0]
     res =  stdoutput.split()
     print( stdoutput)
     
