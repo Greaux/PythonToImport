@@ -33,4 +33,4 @@ if __name__ == "__main__" :
     
     print a.communicate()[0]
     
-    #python -c 'print ":02x".format(0x7FFD1B9DE4E0 - (len("./vuln_fmt") - len("./pea")) * 2)'
+  #print ":02x{}".format(hex(0x7FFD1B9DE4E0 - (len("./vuln_fmt") - len("./pea")) * 2))
