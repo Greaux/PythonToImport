@@ -6,7 +6,7 @@ import os
 if __name__ == "__main__" :
     env = os.environ
     print "Help \n Prog.py -O NUMBER_MAX -- Overfloor tries \n Prog.py TEXT -- Use custom input \n Prog.py -- Create $SHELCODE to given string use as arg \n"
-    if sys.argv[1] == "-O" :
+    if len(sys.argv)>1 and sys.argv[1] == "-O"  :
         env["SHELLCODE"] = 'X'
         for i in range(int(sys.argv[2])):
             # Zapusk sub processa
